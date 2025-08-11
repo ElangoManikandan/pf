@@ -6,26 +6,18 @@
 <title>Elango M - Portfolio</title>
 <style>
     :root {
-        --bg-color: #f4f4f4;
-        --text-color: #333;
-        --card-color: #fff;
-        --link-color: #0066cc;
-        --accent1: #ffe6e6;
-        --accent2: #e6f7ff;
-        --accent3: #e6ffe6;
-        --accent4: #fff5e6;
-        --accent5: #f5e6ff;
+        --bg-color: #ffffff;
+        --text-color: #1a1a1a;
+        --card-color: #ffffff;
+        --link-color: #0047ab; /* Royal Blue */
+        --accent-light: #e6f0ff; /* Light Royal Blue tint */
     }
     body.dark {
-        --bg-color: #121212;
+        --bg-color: #0d0d0d;
         --text-color: #f4f4f4;
-        --card-color: #1e1e1e;
+        --card-color: #1a1a1a;
         --link-color: #4ea3ff;
-        --accent1: #331a1a;
-        --accent2: #1a2b33;
-        --accent3: #1a331a;
-        --accent4: #33291a;
-        --accent5: #2a1a33;
+        --accent-light: #102040;
     }
     body {
         margin: 0;
@@ -35,7 +27,7 @@
         transition: background 0.3s, color 0.3s;
     }
     header {
-        background: linear-gradient(90deg, #ff7e5f, #feb47b);
+        background: linear-gradient(90deg, #002366, #0047ab);
         color: #fff;
         padding: 20px 0;
         text-align: center;
@@ -51,25 +43,20 @@
         transition: color 0.3s;
     }
     nav a:hover {
-        color: #ffff99;
+        color: #ffdd00;
     }
     section {
         padding: 40px;
         max-width: 900px;
         margin: auto;
         margin-bottom: 20px;
+        background: var(--accent-light);
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         opacity: 0;
         transform: translateY(20px);
         transition: opacity 0.8s ease, transform 0.8s ease, background 0.3s;
     }
-    #about { background: var(--accent1); }
-    #experience { background: var(--accent2); }
-    #projects { background: var(--accent3); }
-    #skills { background: var(--accent4); }
-    #education { background: var(--accent5); }
-    #contact { background: var(--accent2); }
     section.visible {
         opacity: 1;
         transform: translateY(0);
@@ -87,7 +74,7 @@
     }
     .contact a:hover { color: #ff6600; }
     footer {
-        background: linear-gradient(90deg, #ff7e5f, #feb47b);
+        background: linear-gradient(90deg, #002366, #0047ab);
         color: #fff;
         text-align: center;
         padding: 15px;
@@ -96,7 +83,7 @@
         position: absolute;
         top: 20px;
         right: 20px;
-        background: rgba(0,0,0,0.4);
+        background: rgba(255,255,255,0.2);
         color: #fff;
         border: none;
         padding: 8px 12px;
@@ -104,7 +91,7 @@
         cursor: pointer;
         transition: background 0.3s;
     }
-    .dark-mode-btn:hover { background: rgba(0,0,0,0.6); }
+    .dark-mode-btn:hover { background: rgba(255,255,255,0.4); }
 </style>
 </head>
 <body>
