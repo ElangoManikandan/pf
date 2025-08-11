@@ -1,204 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elango M - Portfolio</title>
-    <style>
-        :root {
-            --bg-color: #f4f4f4;
-            --text-color: #333;
-            --card-color: #fff;
-            --link-color: #0066cc;
-        }
-        body.dark {
-            --bg-color: #121212;
-            --text-color: #f4f4f4;
-            --card-color: #1e1e1e;
-            --link-color: #4ea3ff;
-        }
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            transition: background 0.3s, color 0.3s;
-        }
-        header {
-            background: #222;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #ffcc00;
-        }
-        section {
-            padding: 40px;
-            max-width: 900px;
-            margin: auto;
-            background: var(--card-color);
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        h2 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            margin: 8px 0;
-        }
-        .contact a {
-            color: var(--link-color);
-            text-decoration: none;
-        }
-        .contact a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            background: #222;
-            color: #fff;
-            text-align: center;
-            padding: 15px;
-        }
-        .dark-mode-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: #444;
-            color: #fff;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .dark-mode-btn:hover {
-            background: #666;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elango M - Portfolio</title>
+<style>
+    :root {
+        --bg-color: #f4f4f4;
+        --text-color: #333;
+        --card-color: #fff;
+        --link-color: #0066cc;
+        --accent1: #ffe6e6;
+        --accent2: #e6f7ff;
+        --accent3: #e6ffe6;
+        --accent4: #fff5e6;
+        --accent5: #f5e6ff;
+    }
+    body.dark {
+        --bg-color: #121212;
+        --text-color: #f4f4f4;
+        --card-color: #1e1e1e;
+        --link-color: #4ea3ff;
+        --accent1: #331a1a;
+        --accent2: #1a2b33;
+        --accent3: #1a331a;
+        --accent4: #33291a;
+        --accent5: #2a1a33;
+    }
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        transition: background 0.3s, color 0.3s;
+    }
+    header {
+        background: linear-gradient(90deg, #ff7e5f, #feb47b);
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    nav a {
+        color: #fff;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+    nav a:hover {
+        color: #ffff99;
+    }
+    section {
+        padding: 40px;
+        max-width: 900px;
+        margin: auto;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease, transform 0.8s ease, background 0.3s;
+    }
+    #about { background: var(--accent1); }
+    #experience { background: var(--accent2); }
+    #projects { background: var(--accent3); }
+    #skills { background: var(--accent4); }
+    #education { background: var(--accent5); }
+    #contact { background: var(--accent2); }
+    section.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    h2 {
+        border-bottom: 2px solid rgba(0,0,0,0.1);
+        padding-bottom: 10px;
+    }
+    ul { list-style: none; padding: 0; }
+    ul li { margin: 8px 0; }
+    .contact a {
+        color: var(--link-color);
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    .contact a:hover { color: #ff6600; }
+    footer {
+        background: linear-gradient(90deg, #ff7e5f, #feb47b);
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+    }
+    .dark-mode-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: rgba(0,0,0,0.4);
+        color: #fff;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    .dark-mode-btn:hover { background: rgba(0,0,0,0.6); }
+</style>
 </head>
 <body>
 
-    <header>
-        <button class="dark-mode-btn" id="darkToggle">🌙 Dark Mode</button>
-        <h1>Elango M</h1>
-        <p>Enthusiastic and Adaptable Fresher | Committed to Continuous Learning</p>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<header>
+    <button class="dark-mode-btn" id="darkToggle">🌙 Dark Mode</button>
+    <h1>Elango M</h1>
+    <p>Enthusiastic and Adaptable Fresher | Committed to Continuous Learning</p>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am an enthusiastic and adaptable fresher, committed to continuous learning and long-term growth. I have experience in networking, web development, and basic AI/ML concepts.</p>
-    </section>
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am an enthusiastic and adaptable fresher, committed to continuous learning and long-term growth. I have experience in networking, web development, and basic AI/ML concepts.</p>
+</section>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <ul>
-            <li><strong>Network Team Lead</strong> | GCE Bargur | 2022-2025<br>Configured IPs, solved network issues, and managed switches for college systems.</li>
-            <li><strong>AI ML Trainee</strong> | NISC Chennai | 2024<br>Completed internship on AI/ML basics using Python to solve real-world technical challenges.</li>
-        </ul>
-    </section>
+<section id="experience">
+    <h2>Experience</h2>
+    <ul>
+        <li><strong>Network Team Lead</strong> | GCE Bargur | 2022-2025<br>Configured IPs, solved network issues, and managed switches for college systems.</li>
+        <li><strong>AI ML Trainee</strong> | NISC Chennai | 2024<br>Completed internship on AI/ML basics using Python to solve real-world technical challenges.</li>
+    </ul>
+</section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Symposium Website</strong> (2025) - Developed using Node.js, MySQL, HTML, CSS, and JavaScript. <a href="https://phantasm.onrender.com" target="_blank">View Project</a></li>
-        </ul>
-    </section>
+<section id="projects">
+    <h2>Projects</h2>
+    <ul>
+        <li><strong>Symposium Website</strong> (2025) - Developed using Node.js, MySQL, HTML, CSS, and JavaScript. <a href="https://phantasm.onrender.com" target="_blank">View Project</a></li>
+    </ul>
+</section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Programming: Java, JavaScript, Python (basic)</li>
-            <li>Web Technologies: HTML, CSS, JavaScript, Node.js</li>
-            <li>Databases: MySQL (CRUD operations)</li>
-            <li>Tools & Platforms: Git, GitHub, Linux</li>
-            <li>Concepts: Networking, IP Configuration, Debugging, Agile Basics</li>
-        </ul>
-    </section>
+<section id="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li>Programming: Java, JavaScript, Python (basic)</li>
+        <li>Web Technologies: HTML, CSS, JavaScript, Node.js</li>
+        <li>Databases: MySQL (CRUD operations)</li>
+        <li>Tools & Platforms: Git, GitHub, Linux</li>
+        <li>Concepts: Networking, IP Configuration, Debugging, Agile Basics</li>
+    </ul>
+</section>
 
-    <section id="education">
-        <h2>Education</h2>
-        <p>B.E CSE - Government College of Engineering Bargur (2021-2025) | CGPA: 6.9</p>
-    </section>
+<section id="education">
+    <h2>Education</h2>
+    <p>B.E CSE - Government College of Engineering Bargur (2021-2025) | CGPA: 6.9</p>
+</section>
 
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>📍 Chennai</p>
-        <p>📞 6374460166</p>
-        <p>📧 <a href="mailto:55elango66@gmail.com">55elango66@gmail.com</a></p>
-        <p>🔗 <a href="https://linkedin.com/in/elango31204" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/ElangoManikandan" target="_blank">GitHub</a> | 
-            <a href="https://www.geeksforgeeks.org/user/55elanq3zq/" target="_blank">GeeksforGeeks</a></p>
-    </section>
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>📍 Chennai</p>
+    <p>📞 6374460166</p>
+    <p>📧 <a href="mailto:55elango66@gmail.com">55elango66@gmail.com</a></p>
+    <p>🔗 <a href="https://linkedin.com/in/elango31204" target="_blank">LinkedIn</a> | 
+        <a href="https://github.com/ElangoManikandan" target="_blank">GitHub</a> | 
+        <a href="https://www.geeksforgeeks.org/user/55elanq3zq/" target="_blank">GeeksforGeeks</a></p>
+</section>
 
-    <footer>
-        <p>&copy; 2025 Elango M | All Rights Reserved</p>
-    </footer>
+<footer>
+    <p>&copy; 2025 Elango M | All Rights Reserved</p>
+</footer>
 
-    <script>
-        // Scroll animations
-        const sections = document.querySelectorAll("section");
-        const revealOnScroll = () => {
-            const triggerBottom = window.innerHeight * 0.85;
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                if (sectionTop < triggerBottom) {
-                    section.classList.add("visible");
-                }
-            });
-        };
-        window.addEventListener("scroll", revealOnScroll);
-        revealOnScroll();
-
-        // Dark mode toggle
-        const toggleBtn = document.getElementById("darkToggle");
-        const currentTheme = localStorage.getItem("theme");
-        if (currentTheme === "dark") {
-            document.body.classList.add("dark");
-            toggleBtn.textContent = "☀️ Light Mode";
-        }
-        toggleBtn.addEventListener("click", () => {
-            document.body.classList.toggle("dark");
-            if (document.body.classList.contains("dark")) {
-                localStorage.setItem("theme", "dark");
-                toggleBtn.textContent = "☀️ Light Mode";
-            } else {
-                localStorage.setItem("theme", "light");
-                toggleBtn.textContent = "🌙 Dark Mode";
+<script>
+    // Scroll animations
+    const sections = document.querySelectorAll("section");
+    const revealOnScroll = () => {
+        const triggerBottom = window.innerHeight * 0.85;
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < triggerBottom) {
+                section.classList.add("visible");
             }
         });
-    </script>
+    };
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+
+    // Dark mode toggle
+    const toggleBtn = document.getElementById("darkToggle");
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme === "dark") {
+        document.body.classList.add("dark");
+        toggleBtn.textContent = "☀️ Light Mode";
+    }
+    toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        if (document.body.classList.contains("dark")) {
+            localStorage.setItem("theme", "dark");
+            toggleBtn.textContent = "☀️ Light Mode";
+        } else {
+            localStorage.setItem("theme", "light");
+            toggleBtn.textContent = "🌙 Dark Mode";
+        }
+    });
+</script>
 
 </body>
 </html>
